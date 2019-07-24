@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package hello;
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+message Response {
+  string message = 1;
+}
+
+message NameRequest {
+  string name = 1;
+}
+
+service Hello {
+  rpc Hello(google.protobuf.Empty) returns (Response) {
+    option (google.api.http) = {
+      get: "/hello"
+    };
+  }
+
+  rpc HelloName(NameRequest) returns (Response) {
+    option (google.api.http) = {
+      post: "/hello"
+      body: "*"
+    };
+  }
+}
