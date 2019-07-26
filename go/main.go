@@ -67,6 +67,8 @@ func main() {
 			return
 		}
 
+		log.Printf("Proxying request for path: %s, method: %s", r.URL.Path, r.Method)
+
 		// remove header; Node will add its own
 		w.Header().Del("X-Source-Server")
 		reverseProxy.ServeHTTP(w, r)
