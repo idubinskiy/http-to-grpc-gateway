@@ -2,6 +2,11 @@
 
 Example of using `grpc-gateway` and `httputil.ReverseProxy` to migrate a service to Go and gRPC by automatically proxying requests for unimplemented methods to the old service.
 
+## GopherCon 2019 Lightning Talk
+
+[![GopherCon 2019 Lightning Talk: Igor Dubinskiy - Interatively Migtrating an HTTP Svc to Go
+](https://img.youtube.com/vi/JnbqLH9lPjM/0.jpg)](https://www.youtube.com/watch?v=JnbqLH9lPjM&list=PL2ntRZ1ySWBedT1MDWF4xAD39vAad0DBT&index=19&t=0s)
+
 ## Requirements
 
 * Go 1.12+ (https://golang.org/dl/)
